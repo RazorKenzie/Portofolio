@@ -31,16 +31,17 @@
     section {padding:140px 12%;}
 
     .hero {
-      height:100vh;
+      min-height:100vh;
       display:flex;
       align-items:center;
       justify-content:center;
+      padding-top:100px; 
     }
 
     .hero-container {
       display:flex;
       align-items:center;
-      margin-top:20px;
+      margin-top:40px;
       gap:80px;
       flex-wrap:wrap;
     }
@@ -150,7 +151,38 @@
       opacity:0.9;
     }
 
-    /* MODAL */
+   
+    .skills-group {
+      margin-bottom:25px;
+    }
+
+    .skills-group h3 {
+      margin-bottom:10px;
+      font-size:1.2rem;
+      color:#38bdf8;
+    }
+
+    .skills-list {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .pill {
+      padding:8px 15px;
+      background:#1e293b;
+      border:1px solid #38bdf8;
+      border-radius:50px;
+      font-size:0.9rem;
+      transition:0.3s;
+    }
+
+    .pill:hover {
+      background:#38bdf8;
+      color:#0f172a;
+      transform:scale(1.05);
+    }
+
     .modal {
       display:none;
       position:fixed;
@@ -177,6 +209,15 @@
       color:white;
       font-size:40px;
       cursor:pointer;
+    }
+    .card h3 {
+      font-size:1.2rem;
+      margin-bottom:10px;
+    }
+
+    .card span {
+      font-size:0.9rem;
+      color:#94a3b8;
     }
 
   </style>
@@ -206,7 +247,9 @@
 
       <button onclick="scrollToSection('projects')">Lihat Project</button>
       <br>
-      <button onclick="downloadCV()">Download CV</button>
+      <a href="asset/cv.pdf" download>
+        <button>⬇ Download CV</button>
+      </a>
 
       <div class="social-buttons">
         <a href="https://wa.me/6282334495278" target="_blank"><button>WhatsApp</button></a>
@@ -221,7 +264,7 @@
 <section id="about">
   <h2>About Me</h2>
   <div class="card">
-    <p>Mahasiswa semester 4 Program Studi Teknik Informatika Politeknik Negeri Jember yang memiliki minat dalam pengembangan aplikasi berbasis desktop dan web. Memiliki kemampuan dasar dalam pemrograman Java, pengelolaan database MySQL, serta pengembangan aplikasi menggunakan Laravel. Terbiasa mengerjakan proyek berbasis sistem informasi dan memiliki kemampuan problem solving, manajemen waktu, serta kerja sama tim yang baik.</p>
+    <p>Mahasiswa semester 4 Program Studi Teknik Informatika Politeknik Negeri Jember dengan keahlian dalam pengembangan aplikasi, dan analisa system. Berpengalaman dalam pengembangan proyek pribadi dan proyek kelompok selama masa kuliah. Mampu bekerjasama dalam tim membentuk kedisiplinan, tanggung jawab, dan etos kerja yang tinggi.</p>
   </div>
 </section>
 
@@ -252,36 +295,77 @@
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="card">
-    <p>Java • MySQL • JasperReports • Figma • HTML • CSS • GitHub • Laravel • Flutter</p>
+  <div class="skills-group">
+  <h3>Technical Skills</h3>
+  <div class="skills-list">
+    <span class="pill">NetBeans</span>
+    <span class="pill">MySQL</span>
+    <span class="pill">GitHub</span>
+    <span class="pill">XAMPP</span>
+    <span class="pill">Figma</span>
+    <span class="pill">VS Code</span>
+    <span class="pill">Laragon</span>
   </div>
+</div>
+
+<div class="skills-group">
+  <h3>Bahasa</h3>
+  <div class="skills-list">
+    <span class="pill">Bahasa Indonesia</span>
+    <span class="pill">Bahasa Inggris (Basic)</span>
+  </div>
+</div>
+
+<div class="skills-group">
+  <h3>Soft Skills</h3>
+  <div class="skills-list">
+    <span class="pill">Problem Solving</span>
+    <span class="pill">Kerjasama Tim</span>
+    <span class="pill">Manajemen Waktu</span>
+  </div>
+</div>
 </section>
 
 <section id="experience">
   <h2>Experience</h2>
   <div class="card">
-    <h3>Pengelolaan Lahan Pertanian</h3>
-    <p>Berpengalaman dalam pengelolaan lahan pertanian, mencakup penanaman, perawatan, dan panen. Mengatur jadwal kerja serta pembagian tugas untuk mendukung kelancaran operasional, serta melakukan pengelolaan hasil panen dan distribusi sederhana. Pengalaman ini mengasah kedisiplinan, tanggung jawab, dan manajemen waktu.</p>
-  </div>
+  <h3>Pengolahan Lahan Pertanian <span style="float:right;">Mei 2024 – Agu 2024</span></h3>
+  <p>Mengelola proses penanaman hingga panen, mengatur jadwal kerja, serta distribusi hasil. Mengembangkan kedisiplinan dan manajemen waktu.</p>
+</div>
+
+<div class="card">
+  <h3>Software Engineer | Floreo <span style="float:right;">Okt 2024 – Des 2024</span></h3>
+  <p>Mengembangkan aplikasi kasir laundry berbasis Java dengan fitur transaksi, pelanggan, dan laporan. Menggunakan MySQL serta implementasi CRUD & JasperReports.</p>
+</div>
+
+<div class="card">
+  <h3>Software Developer | Go-Book <span style="float:right;">Apr 2024 – Jun 2025</span></h3>
+  <p>Membangun sistem kasir desktop berbasis Java dengan manajemen stok, transaksi, dan laporan otomatis menggunakan MySQL & JasperReports.</p>
+</div>
+
+<div class="card">
+  <h3>Software Developer | Nganjuk Abirupa <span style="float:right;">Okt 2025 – Des 2025</span></h3>
+  <p>Mengembangkan aplikasi pemesanan tiket berbasis web & mobile dengan integrasi API, fitur booking, manajemen user, dan database.</p>
+</div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects">
 
-    <div class="card project-card" onclick="openProject('https:pameran-jti.polije.ac.id/x23241_ng/product/127/floreo')">
+    <div class="card project-card" onclick="openProject('https://pameran-jti.polije.ac.id/x23241_ng/product/127/floreo')">
       <img src="img/Floreo.png" class="project-img">
       <h3>Floreo</h3>
       <p>Sistem kasir laundry berbasis Java dengan fitur barcode, transaksi multi-item, dan laporan otomatis.</p>
     </div>
 
-    <div class="card project-card" onclick="openProject('https:pameran-jti.polije.ac.id/product/232/go-book')">
+    <div class="card project-card" onclick="openProject('https://pameran-jti.polije.ac.id/product/232/go-book')">
       <img src="img/GO-BOOK.jpg" class="project-img">
       <h3>Go-Book</h3>
       <p>Sistem kasir toko kelontong berbasis Java desktop.</p>
     </div>
 
-    <div class="card project-card" onclick="openProject('https:pameran-jti.polije.ac.id/product/566/nganjuk-abirupa')">
+    <div class="card project-card" onclick="openProject('https://pameran-jti.polije.ac.id/product/566/nganjuk-abirupa')">
       <img src="img/Nganjuk_Abirupa.jpg" class="project-img">
       <h3>Nganjuk Abirupa</h3>
       <p>Aplikasi berbasis web dan mobile untuk pemesanan tiket wisata daerah Nganjuk.</p>
